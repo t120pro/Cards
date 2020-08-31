@@ -18,7 +18,7 @@ public class Deck {
 		}
 	}
 	public Deck(String empty) {
-		
+		//creating a not-full deck
 	}
 	
 	public void addToDeck(String value, String suit) {
@@ -34,6 +34,7 @@ public class Deck {
 		return popped;
 	}
 	
+	@Override
 	public String toString() {
 		String deckString = "[";
 		for (int i = 0; i < deck.size(); i++) {
@@ -42,12 +43,5 @@ public class Deck {
 		}
 		deckString += "]";
 		return deckString;
-	}
-	
-	public static void main(String[] args) {
-		Deck deck1 = new Deck();
-		System.out.println(deck1.deck.size());
-		deck1.drawCard();
-		System.out.println(deck1.deck.size());
 	}
 }
